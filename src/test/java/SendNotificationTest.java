@@ -1,5 +1,3 @@
-
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -7,7 +5,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import services.Router;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +20,7 @@ public class SendNotificationTest {
     @InjectMocks
     SendNotification sendNotification = new SendNotification();
 
-    public SendNotificationTest()  {
+    public SendNotificationTest() {
     }
 
     @Test
@@ -60,13 +57,13 @@ public class SendNotificationTest {
         sendNotification.execute(null);
 
 
-        verify(router,times(1)).notifyUser("admin1", "user1, user2, user3, не трекались сегодня");
-        verify(router,times(1)).notifyUser("admin2", "user1, user2, user3, не трекались сегодня");
-        verify(router,times(1)).notifyUser("admin3", "user1, user2, user3, не трекались сегодня");
+        verify(router, times(1)).notifyUser("admin1", "user1, user2, user3, не трекались сегодня");
+        verify(router, times(1)).notifyUser("admin2", "user1, user2, user3, не трекались сегодня");
+        verify(router, times(1)).notifyUser("admin3", "user1, user2, user3, не трекались сегодня");
 
-        verify(router,times(1)).notifyUser("lektor1","user4, user5, user6, не трекались 3 дня");
-        verify(router,times(1)).notifyUser("lektor2","user4, user5, user6, не трекались 3 дня");
-        verify(router,times(1)).notifyUser("lektor3","user4, user5, user6, не трекались 3 дня");
+        verify(router, times(1)).notifyUser("lektor1", "user4, user5, user6, не трекались 3 дня");
+        verify(router, times(1)).notifyUser("lektor2", "user4, user5, user6, не трекались 3 дня");
+        verify(router, times(1)).notifyUser("lektor3", "user4, user5, user6, не трекались 3 дня");
 
     }
 }

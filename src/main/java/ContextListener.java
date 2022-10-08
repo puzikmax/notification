@@ -1,4 +1,3 @@
-
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
@@ -6,13 +5,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import java.net.URL;
-
-import static org.quartz.DateBuilder.dateOf;
-
 public class ContextListener implements ServletContextListener {
 
     Scheduler sch;
+
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         final ServletContext servletContext = sce.getServletContext();
@@ -24,9 +20,9 @@ public class ContextListener implements ServletContextListener {
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withSchedule(
                         SimpleScheduleBuilder.simpleSchedule()
-                                .withIntervalInSeconds(60))
-                                /*.withIntervalInHours(24)).startAt(dateOf(22,0,0))
-                .endAt((dateOf(22,0,5)))*/
+                                .withIntervalInSeconds(10).repeatForever())
+                /*.withIntervalInHours(24)).startAt(dateOf(22,0,0))
+.endAt((dateOf(22,0,5)))*/
                 .build();
 
         SchedulerFactory schFactory = new StdSchedulerFactory();
@@ -35,6 +31,7 @@ public class ContextListener implements ServletContextListener {
             sch = schFactory.getScheduler();
             sch.scheduleJob(notification, trigger);
             sch.start();
+
         } catch (SchedulerException e) {
             throw new RuntimeException(e);
         }

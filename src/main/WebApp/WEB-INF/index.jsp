@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <b>NOTIFICATION</b>
+<b>NOTIFICATION</b>
 </body>
 </html>

@@ -4,7 +4,7 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DummyRouter implements Router{
+public class DummyRouter implements Router {
 
 
     @Override
@@ -14,7 +14,7 @@ public class DummyRouter implements Router{
 
     @Override
     public List<String> getAdmins() {
-        List<String > adminsList = new ArrayList<>();
+        List<String> adminsList = new ArrayList<>();
         adminsList.add("admin");
         adminsList.add("admin2");
         return adminsList;
@@ -22,7 +22,7 @@ public class DummyRouter implements Router{
 
     @Override
     public List<String> getLecturers() {
-        List<String > lecturers = new ArrayList<>();
+        List<String> lecturers = new ArrayList<>();
         lecturers.add("Lektor");
         lecturers.add("Lektor2");
         return lecturers;
@@ -38,7 +38,7 @@ public class DummyRouter implements Router{
 
     @Override
     public List<String> getOneDaysNotTrackingUsers() {
-        List<String > untrackedOneDay = new ArrayList<>();
+        List<String> untrackedOneDay = new ArrayList<>();
         untrackedOneDay.add("Петя");
         untrackedOneDay.add("Вася");
         return untrackedOneDay;

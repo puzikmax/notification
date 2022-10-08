@@ -1,4 +1,3 @@
-
 package com.example.generate;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,9 +9,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for reportSender complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="reportSender"&gt;
  *   &lt;complexContent&gt;
@@ -26,14 +25,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "reportSender", propOrder = {
-    "task",
-    "timeOfTrack",
-    "userName"
+        "task",
+        "timeOfTrack",
+        "userName"
 })
 public class ReportSender {
 
@@ -44,11 +41,9 @@ public class ReportSender {
 
     /**
      * Gets the value of the task property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTask() {
         return task;
@@ -56,11 +51,9 @@ public class ReportSender {
 
     /**
      * Sets the value of the task property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTask(String value) {
         this.task = value;
@@ -68,11 +61,9 @@ public class ReportSender {
 
     /**
      * Gets the value of the timeOfTrack property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTimeOfTrack() {
         return timeOfTrack;
@@ -80,11 +71,9 @@ public class ReportSender {
 
     /**
      * Sets the value of the timeOfTrack property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setTimeOfTrack(XMLGregorianCalendar value) {
         this.timeOfTrack = value;
@@ -92,11 +81,9 @@ public class ReportSender {
 
     /**
      * Gets the value of the userName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUserName() {
         return userName;
@@ -104,11 +91,9 @@ public class ReportSender {
 
     /**
      * Sets the value of the userName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUserName(String value) {
         this.userName = value;
